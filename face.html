@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion Shapes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f0f5;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+        }
+
+        .project {
+            background: white;
+            margin: 20px auto;
+            padding: 15px;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #emotionDisplay {
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Emotion Shapes</h1>
+        <p>Click buttons to display shapes representing emotions like happy, sad, or angry.</p>
+    </header>
+
+    <section class="project">
+        <h3>Choose an Emotion</h3>
+        <button onclick="displayEmotion('happy')">😊 Happy</button>
+        <button onclick="displayEmotion('sad')">😢 Sad</button>
+        <button onclick="displayEmotion('angry')">😡 Angry</button>
+        <p id="emotionDisplay">🙂</p>
+    </section>
+
+    <script>
+        function displayEmotion(emotion) {
+            const emotionDisplay = document.getElementById('emotionDisplay');
+            const emotions = {
+                happy: '😊',
+                sad: '😢',
+                angry: '😡'
+            };
+            emotionDisplay.innerText = emotions[emotion] || '🙂';
+        }
+    </script>
+</body>
+</html>
